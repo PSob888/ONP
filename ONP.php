@@ -6,7 +6,7 @@
 
     class ONP implements RPN{
 
-        public function calculate(string $input) {
+        public function calculate(string $input): float{
             $stack = []; #stos do odkładania liczb
             $items = explode(' ', $input); #odseparowanie liczb i znaków
     
@@ -55,4 +55,8 @@
             }
         }
     }
+
+    $onpExpression = "3 4 + 2 * 1 + 5 6 - *";
+    $a = new ONP;
+    echo $a->calculate($onpExpression);
 ?>
